@@ -148,3 +148,9 @@ select top 3 Age, Name from Person
 
 -- Näita esimene 50% tabeli sisust
 select top 50 percent * from Person
+
+-- Järjesta isikud vanuse järgi kasvavalt
+select * from Person order by cast(Age as int)
+
+-- Kõikide isikute koondvanus
+select sum(cast(Age as int)) from Person
